@@ -16,3 +16,10 @@ the client will connect to 68.183.85.22 where cbdc and p2p network is running
 ### url "/blockexplorer"
 - for getting information about the last 10 blocks
 - use mozilla firefox to get better view of json data
+
+### How to run
+- download npm
+- clone repo
+- install dependencies using "npm install"
+- ensure port 9000 in your pc is free
+- run "npm run connect"
