@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>p2p & cbdc</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+
+      .the-font {
+        font-family: "Roboto Flex", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex w-screen h-screen the-font">
+      <!-- p2p txn information -->
+
+      <div
+        class="w-1/2 h-fit border-r-2 border-black px-8 space-y-2 flex flex-col items-center justify-start relative top-1/2 transform -translate-y-1/2"
+      >
+        <h1 class="w-fit underline">p2p network info</h1>
+        <h2 id="p2p_wallet_amount">total wallet amount: 0</h2>
+
+        <h2 id="p2p_txn_ids">txns ids available: []</h2>
+
+        <p>Enter public key below</p>
+
+        <textarea id="pub_p2p" class="border-2 border-grey-200"></textarea>
+
+        <div class="flex space-x-2">
+          <p>amount</p>
+          <input
+            id="amount_p2p"
+            class="focus:outline-none border-b-2 border-black"
+            value="0"
+            type="number"
+          />
+        </div>
+
+        <button
+          id="submit_p2p"
+          class="border-2 border-black rounded-md hover:bg-black hover:text-white px-4 py-2"
+        >
+          submit
+        </button>
+        <p>
+          Warning! Please enter the correct public key in pem format. Once sent,
+          it is final!
+        </p>
+      </div>
+
+      <!-- cbdc txn information -->
+
+      <div
+        class="w-1/2 h-fit border-r-2 border-black px-8 space-y-2 flex flex-col items-center justify-start relative top-1/2 transform -translate-y-1/2"
+      >
+        <h1 class="w-fit underline">cbdc network info</h1>
+
+        <h2 id="cbdc_wallet_amount">total wallet amount: 0</h2>
+
+        <h2 id="cbdc_txn_ids">txns ids available: []</h2>
+
+        <p>Enter public key below</p>
+
+        <textarea id="pub_cbdc" class="border-2 border-grey-200"></textarea>
+
+        <div class="flex space-x-2">
+          <p>amount</p>
+          <input
+            id="amount_cbdc"
+            class="focus:outline-none border-b-2 border-black"
+            value="0"
+            type="number"
+          />
+        </div>
+        <button
+          id="submit_cbdc"
+          class="border-2 border-black rounded-md hover:bg-black hover:text-white px-4 py-2"
+        >
+          submit
+        </button>
+        <p>
+          Warning! Please enter the correct public key in pem format. Once sent,
+          it is final!
+        </p>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
